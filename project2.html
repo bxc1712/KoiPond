@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Koi Pond</title>
+	<link rel="stylesheet" href="uiCSS.css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<h1>Koi Pond</h1>
+	<canvas id="canvas" width="640" height="480">
+		Get a real browser!
+	</canvas>
+	<div id='controls'>
+		<div id="rippleStuff">
+			<label><p class="controlTitle">Ripple Properties</p><br>
+				<div class="propAlign">
+					<label for="startAlpha">Starting Alpha</label>
+					<form>
+						<input class="rTheme" id="startAlpha" type ="range" min ="0.0" max="1.0" step =".1"/>
+					</form>
+					<label for="decayStart">Decay Start</label>
+					<form>
+						<input class="rTheme" id="decayStart" type ="range" min ="0.0" max="0.5" step =".05"/>
+					</form>	
+					<label for="decayRate">Decay Rate</label>
+					<form>
+						<input class="rTheme" id="decayRate" type ="range" min ="0.0" max="0.5" step =".05"/>
+					</form>	
+					<label for="replicateTime">Replicate Time</label>
+					<form>
+						<input class="rTheme" id="replicateTime" type ="range" min ="0.0" max="0.1" step =".01"/>
+					</form>
+					<label for="rippleNum">Ripple Number</label>
+					<form>
+						<input class="rTheme" id="rippleNum" type ="number" min="1" max="10"/>
+					</form>
+					<label for="lineSize">Ripple Line Size</label>
+					<form>
+						<input class="rTheme" id="lineSize" type ="number" min="1" max="10"/>
+					</form>
+					<label for="scaleSpeed">Ripple Speed</label>
+					<form>
+						<input class="rTheme" id="scaleSpeed" type ="number" min="10" max="100" step="10"/>
+					</form>
+				</div>
+			</label>
+		</div>
+		<div id="fishStuff">
+			<label><p class="controlTitle">Fish Properties</p><br>
+				<div class="propAlign">
+					<label for="fishMinSizeMod">Fish Minimum Size Modifier</label>
+					<form>
+						<input class="fTheme" id="fishMinSizeMod" type ="range" min ="0.1" max="0.5" step =".05"/>
+					</form>
+					<label for="fishMaxSizeMod">Fish Maximum Size Modifier</label>
+					<form>
+						<input class="fTheme" id="fishMaxSizeMod" type ="range" min ="0.1" max="0.5" step =".05"/>
+					</form>
+					<label for="angleChange">Turn Angle</label>
+					<form>
+						<input class="fTheme" id="angleChange" type ="range" min=".01" max=".5" step=".01"/>
+					</form>
+					<label for="fleeRadChange">Flee Radius</label>
+					<form>
+						<input class="fTheme" id="fleeRadChange" type ="range" min ="10" max="250" step ="10"/>
+					</form>
+					<label for="fleeTimeChange">Flee Time</label>
+					<form>
+						<input class="fTheme" id="fleeTimeChange" type ="range" min =".5" max="25" step ="1"/>
+					</form>
+					<label for="numFish">Number of Fish</label>
+					<form>
+						<input class="fTheme" id="numFish" type ="number" min ="0" max="50" step ="1"/>
+					</form>
+					
+					<!--<label for="fishSize">Fish Base Size</label>
+					<form>
+						<input class="fTheme" id="fishSize" type ="number" min =".6" max="1.4" step =".1"/>
+					</form>-->
+					<label for="swimSpeed">Swim Speed</label>
+					<form>
+						<input class="fTheme" id="swimSpeed" type ="number" min="60" max="250"/>
+					</form>
+					<label for="tcRate">Turn Change Rate</label>
+					<form>
+						<input class="fTheme" id="tcRate" type ="number" min="1" max="25"/>
+					</form>
+					<label for="spawnButton">Spawn New Fish</label>
+					<form>
+						<button type="button" id="spawnButton">Spawn</button>
+					</form>
+				</div>
+			</label>
+		</div>
+		<div id="waterStuff">
+		<label><p class="controlTitle">Water Properties</p><br>
+			<div class="propAlign">
+				<label for="clarity">Opacity/Alpha of Water</label>
+				<form>
+					<input class="wTheme" id="clarity" type ="range" min ="0.01" max="0.25" step =".01"/>
+				</form>
+				<label for="red">Red Value</label>
+				<form>
+					<input class="wTheme" id="red" type ="range" min ="0" max="255" step ="1"/>
+				</form>
+				<label for="green">Green Value</label>
+				<form>
+					<input class="wTheme" id="green" type ="range" min ="0" max="255" step ="1"/>
+				</form>
+				<label for="blue">Blue Value</label>
+				<form>
+					<input class="wTheme" id="blue" type ="range" min ="0" max="255" step ="1"/>
+				</form>
+			</div>
+		</label>
+		</div>
+	</div>
+	<section id="audioControls">
+		<audio id="bgAudio" src="media/Kevin MacLeod - New Direction.mp3" controls loop></audio>
+		<audio id="effectAudio" controls></audio>
+	</section>
+	<script src='loader.js'></script>
+	<script src='utilities.js'></script>
+	<script src='main.js'></script>
+	<script src='ui.js'></script>
+	<script src='sound.js'></script>
+</body>
+</html>
